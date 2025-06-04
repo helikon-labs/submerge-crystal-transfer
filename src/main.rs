@@ -49,7 +49,8 @@ async fn main() -> anyhow::Result<()> {
         CONN_TIMEOUT_SECS,
         POOL_MAX_CONNS,
     ).await?;
-    let dst = PostgreSQLStorage::new(
+    /*
+    let _dst = PostgreSQLStorage::new(
         args.dst_host.as_str(),
         args.dst_port,
         args.dst_user.as_str(),
@@ -58,7 +59,8 @@ async fn main() -> anyhow::Result<()> {
         CONN_TIMEOUT_SECS,
         POOL_MAX_CONNS,
     ).await?;
-    let start_block_number = dst.get_next_block_number(0, u64::MAX).await?;
+     */
+    let start_block_number = 0; // dst.get_next_block_number(0, u64::MAX).await?;
     log::info!("Start block number: {start_block_number}");
     let target_block_number = src.get_max_block_number().await?;
     log::info!("Target block number: {target_block_number}");
