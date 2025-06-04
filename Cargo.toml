@@ -1,0 +1,20 @@
+[package]
+name = "submerge-crystal-transfer"
+version = "0.1.0"
+rust-version = "1.83.0"
+edition = "2021"
+repository = "https://github.com/helikon-labs/submerge"
+authors = ["kukabi <kutsal@helikon.io>"]
+license = "GPL-3"
+
+[dependencies]
+anyhow = "1"
+clap = { version = "4.5", features = ["derive"] }
+env_logger = "0.11"
+hex = "0.4"
+log = "0.4"
+serde = { version = "1.0", features = ["derive"] }
+sqlx = { version = "0.8", features = ["postgres", "runtime-tokio-rustls", "chrono", "macros", "runtime-tokio-native-tls"] }
+strum = "0.27"
+strum_macros = "0.27"
+tokio = { version = "1.45", features = ["full"] }
